@@ -1,26 +1,26 @@
 class Gm < Formula
   desc "CLI for gitmorph.com - manage repos, issues, PRs, and CI/CD"
   homepage "https://gitmorph.com"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.5/gm-darwin-arm64"
-      sha256 "4ad8ab77a0a4914a71ba7bae192729f2ac7c6c17e67cc6dddc5cfeca06cbd07f"
+      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.6/gm-darwin-arm64"
+      sha256 "3d9adea03a0ca9cbe4bf779423d449947af82c7dffe5dffc8738072de205e8d1"
     else
-      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.5/gm-darwin-amd64"
-      sha256 "50d69df15231f0d41d1521b1acbd1e10152e16526d658a0eb15754b23c0048c8"
+      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.6/gm-darwin-amd64"
+      sha256 "95d0385f08752944b81b49c637e686d2bac297a618122c6ecd3d516881674407"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.5/gm-linux-arm64"
-      sha256 "c88ce9dd131e42a62b7600cf92f9e2e7f38838603ac5aa8bbc38afe064c36884"
+      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.6/gm-linux-arm64"
+      sha256 "bbd0472d0df037f96538487d96daf79d5abbe000c62743aff3faafdea0b2af07"
     else
-      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.5/gm-linux-amd64"
-      sha256 "7598508698880c6fa3a271170adaa20b6775775d6e67050ca6f0fc20a67a8583"
+      url "https://gitmorph.com/morphllm/releases/releases/download/v0.2.6/gm-linux-amd64"
+      sha256 "101b40354d22212f1c5802feac454bf891582687ad247e77ffcb6f0c26d66fdf"
     end
   end
 
@@ -29,6 +29,6 @@ class Gm < Formula
   end
 
   test do
-    assert_match "0.2.5", shell_output("#{bin}/gm --version")
+    assert_match "0.2.6", shell_output("#{bin}/gm --version")
   end
 end
